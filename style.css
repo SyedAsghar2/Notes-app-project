@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.header-container {
+    background-color: rgb(0, 160, 13);
+    height: 120px;
+    right: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    border-bottom: 5px;
+    border-bottom-style: solid ;
+    border-color: forestgreen;
+    display: flex;
+    align-items: center;
+}
+
+.header-container .title {
+    font-size: 70px;
+    font-family: 'Consolas';
+    color: white;
+    margin-left: 20px;
+}
+
+.header-container .save-note {
+    margin-left: auto;
+    background-color: forestgreen;
+    color: white;
+    height: 30px;;
+    margin-right: 30px;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Consolas';
+
+}
+
+.body-container {
+    display:flex;
+    height: 500px;
+    background-color: blue;
+}
+
+.saved-notes-container {
+    background-color: rgb(128, 0, 0);
+    height: 500px;
+    right: 0px;
+    width: 300px;
+}
+
+.note-page-container {
+    box-sizing: border-box;
+    border-left: 5px;
+    border-left-style: solid ;
+    border-color: red;
+    background-color: orange;
+    height: 500px;
+    flex-grow: 1;   
+}
+
+.note-page-container  #current-note{
+    display: flex;
+    flex-direction: column; 
+}
+
+.note-page-container  #current-note #note-body{
+    flex-grow: 1;
+}

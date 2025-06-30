@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes App</title>
-    <link rel="stylesheet" href= "style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-container">
+        <div class="title">Notes</div>
+        <button class = "save-note" type="submit" form="current-note">SAVE</button>
+    </div>
 
-</head>
-<body>
-    
-
-
-
-
-
-
-
-
-</body>
+    <div class="body-container">
+      <div class="saved-notes-container"></div>
+      <div class="note-page-container">
+        <form id="current-note">
+            <input type="text" id="note-title" name="note-title">
+            <input type="text" id="note-body" name="note-body">
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

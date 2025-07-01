@@ -1,64 +1,100 @@
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-    }
+.header-container {
+    background-color: rgb(0, 160, 13);
+    height: 120px;
+    right: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    border-bottom: 5px;
+    border-bottom-style: solid ;
+    border-color: forestgreen;
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      z-index: 1000;
-    }
+.header-container .title {
+    font-size: 70px;
+    font-family: 'Consolas';
+    color: white;
+    margin-left: 20px;
+}
 
-    .container {
-      display: flex;
-      margin-top: 80px; /* offset for fixed header */
-      padding: 20px;
-    }
+.header-container .save-note {
+    margin-left: auto;
+    background-color: forestgreen;
+    color: white;
+    height: 30px;;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Consolas';
+}
 
-    .left-column {
-      flex: 1;
-      padding: 20px;
-      background-color: #f0f0f0;
-      height: 80vh;
-      width: 10%;
-    }
+.header-container .save-note:hover {
+    cursor: pointer;
+    background-color: rgb(34, 100, 34);
+}
 
-    .right-column {
-      flex: 1;
-      padding: 20px;
-      background-color: #e0e0e0;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+.header-container .delete-note {
+    color: forestgreen;
+    background-color: white;
+    height: 30px;
+    margin-right: 20px;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Consolas';
+}
 
-    input[type="text"] {
-      padding: 10px;
-      font-size: 1rem;
-      width: 100%;
-      margin-bottom: 10px;
-    }
+.header-container .delete-note:hover {
+    cursor: pointer;
+    background-color: rgb(199, 199, 199);
+}
 
-    input[type="submit"] {
-      padding: 10px;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+.body-container {
+    display:flex;
+    height: 500px;
+    background-color: blue;
+}
 
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
+.saved-notes-container {
+    background-color: rgb(188, 188, 0);
+    height: 500px;
+    right: 0px;
+    width: 300px;
+}
+
+.note-page-container {
+    box-sizing: border-box;
+    border-left: 5px;
+    border-left-style: solid ;
+    border-color: yellow;
+    background-color: orange;
+    height: 500px;
+    flex-grow: 1;
+    display:flex;
+    
+}
+
+.note-page-container  #current-note{
+    display: flex;
+    flex-direction: column; 
+    flex:1;
+}
+
+.note-page-container #current-note #note-title {
+    font-size:30px; ;
+    height: 50px;
+    font-family: sans-serif;
+}
+
+.note-page-container #current-note #note-body{
+    resize: none;
+    flex:1;
+    font-size: 22px;
+    font-family: sans-serif
+}

@@ -15,6 +15,7 @@ body {
     border-color: forestgreen;
     display: flex;
     align-items: center;
+    gap: 20px
 }
 
 .header-container .title {
@@ -29,11 +30,19 @@ body {
     background-color: forestgreen;
     color: white;
     height: 30px;;
-    margin-right: 30px;
     border-color: white;
     border-radius: 5px;
     font-family: 'Consolas';
+}
 
+.header-container .delete-note {
+    color: forestgreen;
+    background-color: white;
+    height: 30px;
+    margin-right: 20px;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Consolas';
 }
 
 .body-container {
@@ -43,7 +52,7 @@ body {
 }
 
 .saved-notes-container {
-    background-color: rgb(128, 0, 0);
+    background-color: rgb(188, 188, 0);
     height: 500px;
     right: 0px;
     width: 300px;
@@ -53,17 +62,29 @@ body {
     box-sizing: border-box;
     border-left: 5px;
     border-left-style: solid ;
-    border-color: red;
+    border-color: yellow;
     background-color: orange;
     height: 500px;
-    flex-grow: 1;   
+    flex-grow: 1;
+    display:flex;
+    
 }
 
 .note-page-container  #current-note{
     display: flex;
     flex-direction: column; 
+    flex:1;
 }
 
-.note-page-container  #current-note #note-body{
-    flex-grow: 1;
+.note-page-container #current-note #note-title {
+    font-size:20px; ;
+    height: 50px;
+    font-family: sans-serif;
+}
+
+.note-page-container #current-note #note-body{
+    resize: none;
+    flex:1;
+    font-size: 16px;
+    font-family: sans-serif
 }

@@ -5,7 +5,7 @@ body {
 }
 
 .header-container {
-    background-color: rgb(0, 160, 13);
+    background-color: rgb(3, 180, 18);
     height: 120px;
     right: 0px;
     left: 0px;
@@ -15,7 +15,7 @@ body {
     border-color: forestgreen;
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 15px
 }
 
 .header-container .title {
@@ -25,8 +25,20 @@ body {
     margin-left: 20px;
 }
 
+.header-container .new-note-link{
+    margin-left:auto
+}
+
+.header-container .new-note{
+    color: forestgreen;
+    background-color: white;
+    height: 30px;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Consolas'
+}
+
 .header-container .save-note {
-    margin-left: auto;
     background-color: forestgreen;
     color: white;
     height: 30px;;
@@ -50,7 +62,7 @@ body {
     font-family: 'Consolas';
 }
 
-.header-container .delete-note:hover {
+.header-container .delete-note:hover, .new-note:hover {
     cursor: pointer;
     background-color: rgb(199, 199, 199);
 }
@@ -66,35 +78,83 @@ body {
     height: 500px;
     right: 0px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
+
+.saved-notes-container .note-button-link{
+    display:flex;
+    flex-direction: column;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.saved-notes-container .note-button {
+    background-color: white;
+    color: black;
+    height: 50px; 
+    font-family: 'Consolas';
+    font-size: 15px;
+}
+
+.saved-notes-container .note-button:hover {
+    cursor: pointer;
+    background-color: rgb(194, 194, 194) ;
+}
+
 
 .note-page-container {
     box-sizing: border-box;
     border-left: 5px;
     border-left-style: solid ;
-    border-color: yellow;
-    background-color: orange;
+    border-color: green;
+    background-color: rgb(153, 222, 153);
     height: 500px;
     flex-grow: 1;
     display:flex;
-    
 }
 
 .note-page-container  #current-note{
     display: flex;
     flex-direction: column; 
     flex:1;
+    gap: 5px;
 }
 
 .note-page-container #current-note #note-title {
-    font-size:30px; ;
-    height: 50px;
-    font-family: sans-serif;
+    font-size:35px;
+    height: 45px;
+    margin-top: 5px;
+    resize: none;
+    font-family: "Cosolas";
+    border-color: green;
+    border-radius: 10px;
 }
 
 .note-page-container #current-note #note-body{
     resize: none;
     flex:1;
     font-size: 22px;
-    font-family: sans-serif
+    font-family: "Cosolas";
+    border-color: green;
+    border-radius: 10px;
+}
+
+textarea::placeholder {
+  font-family: "Cosolas";
 }

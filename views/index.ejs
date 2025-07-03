@@ -9,18 +9,24 @@
   <body>
     <div class="header-container">
         <div class="title">Notes</div>
+        <a class="new-note-link" href = "/"><button class = "new-note">Create New Note</button></a>
         <button class = "save-note" type="submit" form="current-note">SAVE</button>
         <button class = "delete-note" type="submit" form="current-note">DELETE</button>
     </div>
 
     <div class="body-container">
-      <div class="saved-notes-container"></div>
+      <div class="saved-notes-container">
+        <% allNotes.forEach(note => { %>
+         <a class="note-button-link" href = "/<%= note.id %>"><button class="note-button"><%= note.title %></button></a>
+       <% }); %>
+      </div>
       <div class="note-page-container">
         <form id="current-note" action="/submit" method="POST">
-            <input type="text" id="note-title" name="note-title" placeholder="Title">
-            <textarea id="note-body" name="note-body" placeholder="Note Body"></textarea>
+            <textarea id="note-title" name="note-title" placeholder="Title"><%=note.title %></textarea>
+            <textarea id="note-body" name="note-body" placeholder="Note Body"><%=note.content%></textarea>
         </form>
       </div>
     </div>
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

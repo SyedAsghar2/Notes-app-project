@@ -134,12 +134,12 @@ a:active {
     flex-direction: column; 
     flex:1;
     gap: 5px;
+    margin: 5px;
 }
 
 .note-page-container #current-note #note-title {
     font-size:35px;
     height: 45px;
-    margin-top: 5px;
     resize: none;
     font-family: "Cosolas";
     border-color: green;
@@ -155,6 +155,10 @@ a:active {
     border-radius: 10px;
 }
 
+input, textarea {
+    padding: 10px
+}
+
 textarea::placeholder {
-  font-family: "Cosolas";
+    font-family: "Cosolas";
 }

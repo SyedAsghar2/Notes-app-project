@@ -8,17 +8,35 @@
   </head>
   <body>
     <div class="header-container">
-        <div class="title">Notes</div>
-        <button class = "save-note" type="submit" form="current-note">SAVE</button>
-        <button class = "delete-note" type="submit" form="current-note">DELETE</button>
+      <div class="title">Notes</div>
+      <button class="save-note" type="submit" form="current-note" formaction="/submit">SAVE</button>
+      <button class="delete-note" type="submit" form="current-note" formaction="/delete">DELETE</button>
     </div>
 
     <div class="body-container">
-      <div class="saved-notes-container"></div>
+      <div class="saved-notes-container">
+        <h3>Saved Notes</h3>
+        <% if (notes.length === 0) { %>
+          <p>No saved notes yet.</p>
+        <% } else { %>
+          <ul>
+            <% notes.forEach(note => { %>
+              <li>
+                <strong><%= note.title %></strong>: <%= note.body %>
+                <form action="/delete" method="POST" style="display:inline;">
+                  <input type="hidden" name="noteId" value="<%= note.id %>" />
+                  <button type="submit">Delete</button>
+                </form>
+              </li>
+            <% }) %>
+          </ul>
+        <% } %>
+      </div>
+
       <div class="note-page-container">
-        <form id="current-note" action="/submit" method="POST">
-            <input type="text" id="note-title" name="note-title" placeholder="Title">
-            <textarea id="note-body" name="note-body" placeholder="Note Body"></textarea>
+        <form id="current-note" method="POST">
+          <input type="text" id="note-title" name="note-title" placeholder="Title" required />
+          <textarea id="note-body" name="note-body" placeholder="Note Body" required></textarea>
         </form>
       </div>
     </div>

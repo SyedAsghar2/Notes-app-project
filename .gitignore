@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE specific files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore local development files
+dev.db
+*.tmp

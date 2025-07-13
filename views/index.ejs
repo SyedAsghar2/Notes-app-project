@@ -11,22 +11,25 @@
         <div class="title">Notes</div>
         <a class="new-note-link" href = "/"><button class = "new-note">Create New Note</button></a>
         <button class = "save-note" type="submit" form="current-note">SAVE</button>
-        <button class = "delete-note" type="submit" form="current-note">DELETE</button>
+        <button class = "delete-note" >DELETE</button>
     </div>
 
     <div class="body-container">
       <div class="saved-notes-container">
-        <% allNotes.forEach(note => { %>
-         <a class="note-button-link" href = "/<%= note.id %>"><button class="note-button"><%= note.title %></button></a>
-       <% }); %>
+        
       </div>
       <div class="note-page-container">
-        <form id="current-note" action="/submit" method="POST">
-            <textarea id="note-title" name="note-title" placeholder="Title"><%=note.title %></textarea>
-            <textarea id="note-body" name="note-body" placeholder="Note Body"><%=note.content%></textarea>
+        <form id="current-note" class ="form-note" action="/api" method="POST">
+            <textarea id="note-title" name="note-title" placeholder="Title" maxlength="30"></textarea>
+            <textarea id="note-body" name="note-body" placeholder="Note Body"></textarea>
+            <p hidden id="note-id" name="note-id"><%=note.id%></p>
         </form>
       </div>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>

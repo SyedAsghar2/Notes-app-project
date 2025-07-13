@@ -81,11 +81,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    overflow:auto;
 }
 
-.saved-notes-container .note-button-link{
+/* .saved-notes-container .note-button-link{
     display:flex;
     flex-direction: column;
+    margin: 5px;
 }
 
 a:link {
@@ -102,7 +104,7 @@ a:hover {
 
 a:active {
   text-decoration: none;
-}
+} */
 
 .saved-notes-container .note-button {
     background-color: white;
@@ -110,6 +112,7 @@ a:active {
     height: 50px; 
     font-family: 'Consolas';
     font-size: 15px;
+    margin: 5px;
 }
 
 .saved-notes-container .note-button:hover {
@@ -129,7 +132,7 @@ a:active {
     display:flex;
 }
 
-.note-page-container  #current-note{
+.note-page-container  .form-note{
     display: flex;
     flex-direction: column; 
     flex:1;
@@ -137,16 +140,16 @@ a:active {
     margin: 5px;
 }
 
-.note-page-container #current-note #note-title {
+.note-page-container .form-note #note-title {
     font-size:35px;
-    height: 45px;
+    max-height: 45px;
     resize: none;
     font-family: "Cosolas";
     border-color: green;
     border-radius: 10px;
 }
 
-.note-page-container #current-note #note-body{
+.note-page-container .form-note #note-body{
     resize: none;
     flex:1;
     font-size: 22px;
